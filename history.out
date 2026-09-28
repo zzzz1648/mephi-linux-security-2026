@@ -1,0 +1,34 @@
+    1  sudo -i
+    2  exit
+    3  ip a
+    4  sudo groupadd students
+    5  sudo useradd -u 1234 -g students user1
+    6  sudo passwd user1
+    7  sudo chage -M 90 user1
+    8  chage -l user1
+    9  sudo chage -l user1
+   10  id user1
+   11  find / -perm -4000 -type f
+   12  find / -perm -4000 -type f 2>/dev/null
+   13  find / -perm -4000 -type f 2>/dev/null >~/suid_files.out
+   14  ls
+   15  ps -eo ruid,euid,user,euser,cmd | awk '$1 != $2 && $2 == 0''
+   16  ps -eo ruid,euid,user,euser,cmd | awk '$1 != $2 && $2 == 0'
+   17  ps -eo ruid,euid,user,euser,cmd | awk '$1 != $2 && $2 == 0' >~/proc_mon.out
+   18  ls
+   19  sudo cp /usr/bin/cat /home/user1/cat_user
+   20  sudo chown root:root /home/user1/cat_user
+   21  sudo chown u+s /home/user1/cat_user
+   22  sudo chmod u+s /home/user1/cat_user
+   23  ls -l /home/user1/cat_user
+   24  sudo ls -l /home/user1/cat_user
+   25  su - user1
+   26  sudo cp /usr/bin/chown /home/user1/chown_user
+   27  sudo nano /etc/sudoers
+   28  su - user1
+   29  sudo nano /etc/sudoers
+   30  su - user1
+   31  sudo nano /etc/sudoers
+   32  su - user1
+   33  echo 'Мой бухгалтерский шифр обучающегося 374805'
+   34  history > ~/history.out
